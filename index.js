@@ -14,16 +14,15 @@ const searchBook = () => {
     }
 }
 const displaySearchResult = books => {
-    document.getElementById('total-books').innerText = `${books.length}`;
+    document.getElementById('total-books').innerText = `${books.length}`
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
     if(books.length === 0){
         document.getElementById('error-message').innerText = `No result found!!!`
     }
     else{
-        document.getElementById('error-message').innerText = ``;
+        document.getElementById('error-message').innerText = ``
         books.forEach(book => {
-            console.log(book);
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
@@ -38,6 +37,6 @@ const displaySearchResult = books => {
               </div>
             `;
             searchResult.appendChild(div);
-        });
+        })
     }
 }
